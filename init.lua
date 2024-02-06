@@ -17,7 +17,22 @@ require('packer').startup(function(use)
 	}
 	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-tree/nvim-web-devicons'
+	use {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+	}
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use {
+    		"nvim-telescope/telescope-file-browser.nvim",
+    		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+	}
 end)
+
+require("core/completions")
+require("core/lspconfig")
+
 --nvim plugins END
 
 --nvim tree START
@@ -57,9 +72,10 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Change leader to a comma
-vim.g.mapleader = ','
+vim.g.mapleader = ' '
 
 map('n', '<leader>f', ':NvimTreeToggle<CR>')
+map('n', '<leader>n', ':NvimTreeFocus<CR>')
 --nvim keybinds END
 
 --nvim vim config START
