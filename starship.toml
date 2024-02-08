@@ -81,19 +81,19 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [git_branch]
-format = "[$symbol$branch]($style)"
+format = "[$symbol$branch | ]($style)"
 style="bold white"
 
 [git_status]
-format = "[ | ](bold white) [$renamed$typechanged$untracked$behind$ahead$modified$up_to_date]($style)"
-stashed = '[](bold yellow)'
-untracked = '[󰤔](bold red)'
-behind = '[ ](bold red)'
-diverged = '[](bold yellow)'
-renamed = '[](bold yellow)'
-ahead = '[ ](bold red)'
-deleted = '[](bold red)'
-modified = '[](bold yellow)'
-typechanged = '[](bold yellow)'
-staged = '[󰥔](bold yellow)'
-up_to_date = '[](bold green)'
+format = '[$all_status$ahead_behind$up_to_date]($style)'
+conflicted = '[](red)'
+ahead = '[ ](yellow)'
+behind = '[ ](yellow)'
+diverged = '[](yellow)'
+up_to_date = "[](green)"
+untracked = '[󰤔](red)'
+stashed = '[](yellow)'
+modified = '[](yellow)'
+staged = '[++\($count\)](green)'
+renamed = '[](yellow)'
+deleted = '[](red)'
