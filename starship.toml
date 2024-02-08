@@ -86,14 +86,14 @@ style="bold white"
 
 [git_status]
 format = '[$all_status$ahead_behind$up_to_date]($style)'
-conflicted = '[](red)'
-ahead = '[ ](yellow)'
-behind = '[ ](yellow)'
-diverged = '[](yellow)'
-up_to_date = "[](green)"
-untracked = '[󰤔](red)'
-stashed = '[](yellow)'
-modified = '[](yellow)'
-staged = '[++\($count\)](green)'
-renamed = '[](yellow)'
-deleted = '[](red)'
+conflicted = '[ ](red)'
+ahead = '[  ](yellow)'
+behind = '[  ](yellow)'
+diverged = '[ ](yellow)'
+up_to_date = "[ ](green)"
+untracked = '[󰤔 ](red)'
+stashed = '[ ](yellow)'
+modified = '[ ](yellow)'
+staged = '[++\($count\) ](green)'
+renamed = '[ ](yellow)'
+deleted = '[ ](red)'
