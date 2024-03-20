@@ -24,9 +24,18 @@ require('packer').startup(function(use)
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use {
+	    'goolord/alpha-nvim',
+	    config = function ()
+		require'alpha'.setup(require'alpha.themes.dashboard'.config)
+	    end
+	}
+	use {
     		"nvim-telescope/telescope-file-browser.nvim",
     		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 	}
+	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+	  require("toggleterm").setup()
+	end}
 end)
 
 --nvim tree START
