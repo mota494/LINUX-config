@@ -5,7 +5,7 @@
 </div>
 
 A very simple and easy to understand config for multiple tools like ZSH, Starship and NVIM.
-zshwget
+
 <div align="center">
 
 ---
