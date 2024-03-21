@@ -18,3 +18,4 @@ wget https://github.com/Mastermindzh/tidal-hifi/releases/download/5.9.0/tidal-hi
 chmod +777 tidal-hifi-5.9.0.AppImage
 wget https://github.com/OpenShot/openshot-qt/releases/download/v3.1.1/OpenShot-v3.1.1-x86_64.AppImage
 chmod +777 OpenShot-v3.1.1-x86_64.AppImage
+curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
