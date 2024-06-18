@@ -21,3 +21,5 @@ path=(
 #starship
 
 eval "$(starship init zsh)"
+
+

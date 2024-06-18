@@ -74,6 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["42-header.nvim"] = {
+    loaded = true,
+    path = "/home/mloureir/.local/share/nvim/site/pack/packer/start/42-header.nvim",
+    url = "https://github.com/Diogo-ss/42-header.nvim"
+  },
+  ["NeoColumn.nvim"] = {
+    loaded = true,
+    path = "/home/mloureir/.local/share/nvim/site/pack/packer/start/NeoColumn.nvim",
+    url = "https://github.com/ecthelionvi/NeoColumn.nvim"
+  },
   ["alpha-nvim"] = {
     config = { "\27LJ\2\na\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\27alpha.themes.dashboard\nsetup\nalpha\frequire\0" },
     loaded = true,
@@ -84,6 +94,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mloureir/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/mloureir/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/mloureir/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,

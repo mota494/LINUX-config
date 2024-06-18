@@ -10,4 +10,6 @@ end
 vim.g.mapleader = ' '
 
 map('n', '<leader>f', ':NvimTreeToggle<CR>')
+map('n', '<leader>t', ':Telescope find_files<CR>')
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 map('n', '<leader>n', ':NvimTreeFocus<CR>')

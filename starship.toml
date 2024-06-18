@@ -6,26 +6,28 @@ continuation_prompt = '▶▶ '
 
 format = """
 [┌────────────{$time}─────────────────>](bold cyan)
-[│](bold cyan)${custom.languages}$c${custom.makefile}
+[│](bold cyan)${custom.languages}$c${custom.makefile}${custom.cpp}
 [│](bold cyan) [user: ](bold green)$username(white)
 [│](bold cyan) [directory: ](bold green)$directory
-[│](bold cyan)${custom.git} ${git_branch}${git_status}
+[│](bold cyan) ${git_branch}${git_status}
 [└─](bold cyan)$os$character
 """
 
 add_newline = false
 
-[custom.git]
-detect_folders = ['.git']
-format = "[ git:](bold green)"
-
 [custom.languages]
-detect_files = ['Makefile']
-detect_extensions = ['c']
+detect_files = ['Makefile', 'makefile']
+detect_extensions = ['c', 'cpp']
 format = "[ languages:](bold green)"
 
+[custom.cpp]
+detect_extensions = ['cpp']
+format = "[$symbol]($style)"
+symbol = " 󰙲"
+style = "bold white"
+
 [custom.makefile]
-detect_files = ['Makefile']
+detect_files = ['Makefile', 'makefile']
 format = "[$symbol]($style)"
 symbol = " "
 style = "bold white"
@@ -81,7 +83,7 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [git_branch]
-format = "[$symbol$branch | ]($style)"
+format = "[git:](bold green) [$symbol$branch | ](bold white)"
 style="bold white"
 
 [git_status]

@@ -23,6 +23,8 @@ require('packer').startup(function(use)
 	}
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-nvim-lsp'
+	use 'Corona040/norminette-linter'
+	use "ecthelionvi/NeoColumn.nvim"
 	use {
 	    'goolord/alpha-nvim',
 	    config = function ()
@@ -32,6 +34,20 @@ require('packer').startup(function(use)
 	use {
     		"nvim-telescope/telescope-file-browser.nvim",
     		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+	}
+	use({
+    		"iamcco/markdown-preview.nvim",
+    		run = function() vim.fn["mkdp#util#install"]() end,
+	})
+	use {
+  		'VonHeikemen/fine-cmdline.nvim',
+  		requires = {
+    			{'MunifTanjim/nui.nvim'}
+  		}
+	}
+	use {
+  		'nvim-lualine/lualine.nvim',
+  		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
 	  require("toggleterm").setup()
