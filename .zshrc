@@ -1,7 +1,10 @@
 #zsh_config
 
-setopt correct
-setopt auto_cd
+setopt CORRECT 
+setopt AUTO_CD #no need to type cd to go to a directory
+setopt COMPLETE_ALIASES #Prevents aliases on the command line from being internally substituted
+setopt APPEND_HISTORY #multiple ZSH sessions have the same history
+setopt C_BASES #Output hexadecimal numbers in the standard C format
 
 #alias
 
@@ -14,8 +17,8 @@ alias videdit="$HOME/bin/OpenShot-v3.1.1-x86_64.AppImage"
 
 path=(
     $path
-    /home/mloureir/bin
-    /home/mloureir/bin/starship
+    $HOME/bin
+    $HOME/bin/starship
 )
 
 #starship

@@ -4,13 +4,16 @@ rm -r $HOME/bin
 mkdir $HOME/bin
 rm $HOME/.config/starship.toml
 rm -r $HOME/.config/nvim
-rm $HOME/.zshrc
 
 #Moves the contents to the correct folder and installs all the appimages necessary
 
 mv nvim $HOME/.config
 mv starship.toml $HOME/.config
-mv .zshrc $HOME
+if [ -f $HOME/.zshrc ]; then
+	cat .zshrc >> $HOME/.zshrc
+else
+	echo mv .zshrc $HOME
+fi
 cd $HOME/bin
 wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
 chmod +777 nvim.appimage
