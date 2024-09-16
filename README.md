@@ -55,3 +55,6 @@ Multiple themes for starship are included on the "starship_configs" folder. The 
 To change the theme, just copy and paste the desired .toml file to your .config folder and replace the old config file
 
 ---
+
+<div align="center">
+
