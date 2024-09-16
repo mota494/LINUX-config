@@ -17,7 +17,8 @@ A very simple and easy to understand config for multiple tools like ZSH, Starshi
 > [!Note]
 > You don't need any sudo permissions to install the config
 
-- Any nerd font of your liking i recommend using [this](https://www.nerdfonts.com/) website
+Requiremets:
+- Any nerd font of your liking i recommend using [this](https://www.nerdfonts.com/) website to get your font
 - ZSH installed and set as main terminal
 - GNU Wget
 
@@ -43,10 +44,14 @@ git clone https://github.com/mota494/LINUX-config.git
 
 ---
 
+
 <div align="center">
 
-# Features
+# Themes
 
 </div>
 
-TBL
+Multiple themes for starship are included on the "starship_configs" folder. The "original" theme will be the one to be applied after running the install.sh
+To change the theme, just copy and paste the desired .toml file to your .config folder and replace the old config file
+
+---
