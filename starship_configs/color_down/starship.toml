@@ -1,0 +1,196 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+right_format = """[](fg:start)$time[](fg:start)"""
+
+continuation_prompt = '▶▶ '
+
+format = """
+[](fg:start)\
+$os\
+$username\
+$hostname\
+[](fg:start bg:middle1)\
+$directory\
+[](fg:middle1 bg:middle2)\
+$git_branch\
+$git_status\
+[](fg:middle2 bg:middle3)\
+$c\
+${custom.cpp}\
+${custom.makefile}\
+$java\
+${custom.lua}\
+${custom.vimrc}\
+${custom.js}\
+${custom.py}\
+[](fg:middle3)
+$character
+"""
+
+add_newline = false
+
+#palette = 'rad'
+palette = 'purple'
+#palette = 'vaporwave'
+#palette = 'retro'
+#palette = 'engine'
+#palette = 'retrorainbow'
+
+[palettes.retrorainbow]
+start = '#b25da6'
+middle1 = '#6688c3'
+middle2 = '#48a56a'
+middle3 = '#eaaf41'
+error = '#FFDFD3'
+text = '#ffffff'
+
+[palettes.engine]
+start = '#D52429'
+middle1 = '#F1602C'
+middle2 = '#EC8922'
+middle3 = '#915018'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.retro]
+start = '#01204E'
+middle1 = '#028391'
+middle2 = '#F85525'
+middle3 = '#FAA968'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.vaporwave]
+start = '#ff00c1'
+middle1 = '#9600ff'
+middle2 = '#4900ff'
+middle3 = '#00b8ff'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.rad]
+start = '#daf7a6'
+middle1 = '#FFC300'
+middle2 = '#FF5733'
+middle3 = '#C70039'
+error = '#FFDFD3'
+text = '#000000'
+
+[palettes.purple]
+start = '#E0BBE4'
+middle1 = '#957DAD'
+middle2 = '#D291BC'
+middle3 = '#FEC8D8'
+error = '#FFDFD3'
+text = '#000000'
+
+[time]
+disabled = false
+format="[$time]($style)"
+time_format = '%T'
+style = "fg:text bg:start"
+
+[java]
+symbol = ' '
+style = 'fg:text bg:middle3'
+format = '[ $symbol]($style)'
+
+[custom.js]
+detect_extensions = ['js']
+symbol = ' '
+style = 'fg:text bg:middle3'
+format = '[ $symbol]($style)'
+
+[c]
+symbol = ' '
+style = 'fg:text bg:middle3'
+format = '[ $symbol]($style)'
+
+[custom.vimrc]
+detect_extensions = ['vimrc']
+symbol = ' '
+style = 'fg:text bg:middle3'
+format = '[ $symbol]($style)'
+
+[custom.lua]
+detect_extensions = ['lua']
+symbol = ' '
+style = 'fg:text bg:middle3'
+format = '[ $symbol]($style)'
+
+
+[custom.makefile]
+detect_files = ['Makefile', 'makefile']
+symbol = ' '
+style = 'fg:text bg:middle3'
+format = '[ $symbol]($style)'
+
+[custom.py]
+detect_extensions = ['py']
+symbol = ' '
+style = 'fg:text bg:middle3'
+format = '[ $symbol]($style)'
+
+[custom.cpp]
+detect_extensions = ['cpp', 'hpp']
+symbol = '󰙲 '
+style = 'fg:text bg:middle3'
+format = '[ $symbol]($style)'
+
+[git_status]
+format = '[ $all_status$ahead_behind ]($style)'
+up_to_date = '✓'
+style = "fg:text bg:middle2"
+
+[git_branch]
+disabled = false
+format = '[ $branch ]($style)'
+style = 'fg:text bg:middle2'
+
+[username]
+disabled = false
+show_always = true
+style_user = 'fg:text bg:start'
+format = '[$user @]($style)'
+
+[hostname]
+style = 'fg:text bg:start'
+format = '[ $hostname]($style)'
+ssh_only = false
+disabled = false
+
+[character]
+success_symbol = '[](middle3)'
+error_symbol = '[](error)'
+
+
+[directory]
+format = '[  $path]($style)'
+style = 'fg:text bg:middle1'
+
+[os]
+format = '[$symbol ]($style)'
+disabled = false
+style = 'fg:text bg:start'
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = ""
+SUSE = ""
+Raspbian = ""
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+

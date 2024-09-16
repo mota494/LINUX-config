@@ -1,0 +1,106 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+right_format = """"""
+
+continuation_prompt = '▶▶ '
+
+format = """
+[┌────────────{$time}─────────────────>](bold cyan)
+[│](bold cyan)${custom.languages}$c${custom.makefile}${custom.cpp}
+[│](bold cyan) [user: ](bold green)$username(white)[ λ ](bold green)$hostname
+[│](bold cyan) [directory: ](bold green)$directory
+[│](bold cyan) ${git_branch}${git_status}
+[└─](bold cyan)$os$character
+"""
+
+add_newline = false
+
+[hostname]
+ssh_only = false
+format = '[$hostname](bold white)'
+disabled = false
+
+[custom.languages]
+detect_files = ['Makefile', 'makefile']
+detect_extensions = ['c', 'cpp']
+format = "[ languages:](bold green)"
+
+[custom.cpp]
+detect_extensions = ['cpp']
+format = "[$symbol]($style)"
+symbol = " 󰙲"
+style = "bold white"
+
+[custom.makefile]
+detect_files = ['Makefile', 'makefile']
+format = "[$symbol]($style)"
+symbol = " "
+style = "bold white"
+
+[time]
+disabled = false
+format="[$time]($style)"
+time_format = '%T'
+style = "bold white"
+
+[c]
+format = "[$symbol]($style)"
+symbol = " "
+detect_extensions = ['c', 'h']
+style = "bold white"
+
+[character]
+success_symbol = '[ ↣](bold green)'
+error_symbol = '[ ↣](bold red)'
+
+[username]
+style_user = 'bold white'
+disabled = false
+show_always = true
+format = '[$user]($style)'
+
+[directory]
+style = "bold white"
+
+[os]
+disabled = false
+style = "bold white"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = ""
+SUSE = ""
+Raspbian = ""
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[git_branch]
+format = "[git:](bold green) [$symbol$branch | ](bold white)"
+style="bold white"
+
+[git_status]
+format = '[$all_status$ahead_behind$up_to_date]($style)'
+conflicted = '[ ](red)'
+ahead = '[  ](yellow)'
+behind = '[  ](yellow)'
+diverged = '[ ](yellow)'
+up_to_date = "[ ](green)"
+untracked = '[󰤔 ](red)'
+stashed = '[ ](yellow)'
+modified = '[ ](yellow)'
+staged = '[++\($count\) ](green)'
+renamed = '[ ](yellow)'
+deleted = '[ ](red)'
