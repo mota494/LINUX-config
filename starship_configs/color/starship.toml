@@ -33,7 +33,16 @@ add_newline = false
 #palette = 'vaporwave'
 #palette = 'retro'
 #palette = 'engine'
-palette = 'retrorainbow'
+#palette = 'retrorainbow'
+palette = 'veryred'
+
+[palettes.veryred]
+start = '#CE0000'
+middle1 = '#AA0000'
+middle2 = '#D5D5D5'
+middle3 = '#F1F1F1'
+error = '#FFDFD3'
+text = '#032323'
 
 [palettes.retrorainbow]
 start = '#b25da6'
@@ -137,8 +146,18 @@ style = 'fg:text bg:middle3'
 format = '[ $symbol]($style)'
 
 [git_status]
-format = '[ $all_status$ahead_behind ]($style)'
+format = '[$all_status $ahead_behind]($style)'
 up_to_date = '✓'
+conflicted = '🏳'
+ahead = '⇑'
+behind = '⇓'
+diverged = '↰'
+untracked = '󰤔'
+stashed = '🮽'
+modified = '⚙'
+staged = '[++\($count\)](fg:text bg:middle2)'
+renamed = '✎'
+deleted = '🗑 '
 style = "fg:text bg:middle2"
 
 [git_branch]
