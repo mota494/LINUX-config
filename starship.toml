@@ -9,7 +9,7 @@ format = """
 [│](bold cyan)${custom.languages}$c${custom.makefile}${custom.cpp}
 [│](bold cyan) [user: ](bold green)$username(white)[ λ ](bold green)$hostname
 [│](bold cyan) [directory: ](bold green)$directory
-[│](bold cyan) ${git_branch}${git_status}
+[│](bold cyan) ${}${git_status}
 [└─](bold cyan)$os$character
 """
 
@@ -58,9 +58,6 @@ style_user = 'bold white'
 disabled = false
 show_always = true
 format = '[$user]($style)'
-
-[directory]
-style = 'bold white'
 
 [os]
 disabled = false

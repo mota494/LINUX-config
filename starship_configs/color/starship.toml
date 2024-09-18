@@ -1,6 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-right_format = """[](fg:start)$time[](fg:start)"""
+#right_format = """[](fg:start)$time[](fg:start)"""
 
 continuation_prompt = '▶▶ '
 
@@ -34,7 +34,16 @@ add_newline = false
 #palette = 'retro'
 #palette = 'engine'
 #palette = 'retrorainbow'
-palette = 'veryred'
+#palette = 'veryred'
+palette = 'last_purple'
+
+[palettes.last_purple]
+start = '#5E008A'
+middle1 = '#7A00B3'
+middle2 = '#9D00E5'
+middle3 = '#AE00FF'
+error = '#ff00f7'
+text = '#FFFFFF'
 
 [palettes.veryred]
 start = '#CE0000'
@@ -152,9 +161,9 @@ conflicted = '🏳'
 ahead = '⇑'
 behind = '⇓'
 diverged = '↰'
-untracked = '󰤔'
-stashed = '🮽'
-modified = '⚙ '
+untracked = ' 󰤔'
+stashed = ' 🮽'
+modified = ' ⚙'
 staged = '[++\($count\)](fg:text bg:middle2)'
 renamed = '✎'
 deleted = '🗑 '
