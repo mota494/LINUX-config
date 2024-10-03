@@ -1,24 +1,27 @@
 #zsh_config
 
-setopt CORRECT 
-setopt AUTO_CD #no need to type cd to go to a directory
-setopt COMPLETE_ALIASES #Prevents aliases on the command line from being internally substituted
-setopt APPEND_HISTORY #multiple ZSH sessions have the same history
-setopt C_BASES #Output hexadecimal numbers in the standard C format
+setopt correct
+setopt auto_cd
 
 #alias
 
 alias vconf="vim $HOME/.config/nvim"
+alias tconf="vim $HOME/.tmux.conf"
+alias solitair="Downloads/AisleRiot-Solitaire_3.22.33-1-archimage3.4.4-2-x86_64.AppImage"
 alias tidal="$HOME/bin/tidal-hifi-5.9.0.AppImage"
 alias vim="$HOME/bin/nvim.appimage"
 alias videdit="$HOME/bin/OpenShot-v3.1.1-x86_64.AppImage"
+alias 42_formatter="python3 -m c_formatter_42"
+alias normer="norminette | grep "Error:""
+alias normnum="norminette | grep "Error" | wc -l" 
 
 #path_config
 
 path=(
     $path
-    $HOME/bin
-    $HOME/bin/starship
+    /home/mloureir/bin
+    /home/mloureir/bin/starship
+    /home/mloureir/goinfre/homebrew/bin
 )
 
 #starship

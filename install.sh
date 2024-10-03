@@ -12,7 +12,7 @@ mv starship.toml $HOME/.config
 if [ -f $HOME/.zshrc ]; then
 	cat .zshrc >> $HOME/.zshrc
 else
-	echo mv .zshrc $HOME
+	mv .zshrc $HOME
 fi
 cd $HOME/bin
 wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
