@@ -42,6 +42,8 @@ git clone https://github.com/mota494/LINUX-config.git
 
 2. Open a terminal inside that folder and run the install.sh script you may need to give it permissions to be executable
 
+3. For nvim you'll have to open it with `vim` or `nvim` and ignore the errors that it gives you and just run `PackerInstall` after running it the first time close down NVim, open it again and run `PackerInstall`
+
 ---
 
 
