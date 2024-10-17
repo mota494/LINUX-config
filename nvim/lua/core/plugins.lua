@@ -23,7 +23,7 @@ require('packer').startup(function(use)
 	}
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-nvim-lsp'
-	use 'Corona040/norminette-linter'
+	use 'Corona040/highlight-norminette.nvim'
 	use "ecthelionvi/NeoColumn.nvim"
 	use {
 	    'goolord/alpha-nvim',
