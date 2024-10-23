@@ -1,8 +1,3 @@
-require("core/plugins")
-require("core/plugins_conf")
-require("core/completions")
-require("core/lspconfig")
-require("core/basic")
-require("NeoColumn").setup()
-require("core/keybinds")
-
+require("config.vim_opts")
+require("config.keybinds")
+require("config.lazy")
