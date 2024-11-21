@@ -17,10 +17,33 @@ else
 	mv .zshrc $HOME
 fi
 
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 cd $HOME/bin
 wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
 chmod +777 nvim.appimage
-wget https://github.com/Mastermindzh/tidal-hifi/releases/download/5.9.0/tidal-hifi-5.9.0.AppImage
-chmod +777 tidal-hifi-5.9.0.AppImage
+
+while true; do
+read -p "Do you want to install Tidal Hifi? (yes/no) " yn
+case $yn in 
+	yes )	wget https://github.com/Mastermindzh/tidal-hifi/releases/download/5.9.0/tidal-hifi-5.9.0.AppImage
+		chmod +777 tidal-hifi-5.9.0.AppImage;
+		break;;
+	no ) echo the installation will proceed without tidal;
+		break ;;
+	* ) echo invalid response;;
+esac
+done
+
+if [ -d $HOME/.vim ]; then
+	if [ -d $HOME/.vim/plugin ]; then
+		mv stdheader.vim $HOME/.vim/plugin
+	else
+		mkdir $HOME/.vim/plugin
+		mv stdheader.vim $HOME/.vim/plugin
+	fi
+else
+	mkdir $HOME/.vim
+	mkdir $HOME/.vim/plugin
+	mv stdheader.vim $HOME/.vim/plugin
+fi
+
 curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
