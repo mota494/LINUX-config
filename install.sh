@@ -18,6 +18,16 @@ else
 	mv .zshrc $HOME
 fi
 
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
+
+if [ -d $HOME/.config/kitty ]; then
+	mv kitty.conf $HOME/.config/kitty
+else
+	mkdir $HOME/.config/kitty
+	mv kitty.conf $HOME/.config/kitty 
+fi
+
 cd $HOME/bin
 wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
 chmod +777 nvim.appimage
@@ -46,6 +56,3 @@ else
 	mkdir $HOME/.vim/plugin
 	mv stdheader.vim $HOME/.vim/plugin
 fi
-
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
