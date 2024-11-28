@@ -7,6 +7,7 @@ rm -r $HOME/.config/nvim
 
 #Moves the contents to the correct folder and installs all the appimages necessary
 
+mv open_kitty.sh $HOME/bin
 mv nvim $HOME/.config
 mv starship.toml $HOME/.config
 
@@ -46,4 +47,5 @@ else
 	mv stdheader.vim $HOME/.vim/plugin
 fi
 
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
