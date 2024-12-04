@@ -23,7 +23,14 @@ add_newline = false
 #palette = 'retrorainbow'
 #palette = 'veryred'
 #palette = 'last_purple'
-palette = 'gulf'
+#palette = 'gulf'
+palette = 'phantom_thieves'
+
+[palettes.phantom_thieves]
+middle1 = '#ff0505'
+middle2 = '#ffffff'
+error = '#732424'
+text = '#0d0d0d'
 
 [palettes.gulf]
 middle1 = '#93dafe'

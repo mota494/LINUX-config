@@ -1,103 +1,122 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-right_format = """"""
+right_format = """[](fg:middle1)$time[](fg:middle1)"""
 
 continuation_prompt = '▶▶ '
 
 format = """
-[┌────────────{$time}─────────────────>](bold cyan)
-[│](bold cyan)${custom.languages}$c${custom.makefile}${custom.cpp}
-[│](bold cyan) [user: ](bold green)$username(white)[ λ ](bold green)$hostname
-[│](bold cyan) [directory: ](bold green)$directory
-[│](bold cyan) ${git_branch}${git_status}
-[└─](bold cyan)$os$character
+[](fg:middle1)\
+$directory\
+[](fg:middle1 bg:middle2)\
+$git_branch\
+$git_status\
+$character
 """
 
 add_newline = false
 
-[hostname]
-ssh_only = false
-format = '[$hostname](bold white)'
-disabled = false
+#palette = 'rad'
+#palette = 'purple'
+#palette = 'vaporwave'
+#palette = 'retro'
+#palette = 'engine'
+#palette = 'retrorainbow'
+#palette = 'veryred'
+#palette = 'last_purple'
+#palette = 'gulf'
+palette = 'phantom_thieves'
 
-[custom.languages]
-detect_files = ['Makefile', 'makefile']
-detect_extensions = ['c', 'cpp']
-format = "[ languages:](bold green)"
+[palettes.phantom_thieves]
+middle1 = '#ff0505'
+middle2 = '#ffffff'
+error = '#732424'
+text = '#0d0d0d'
 
-[custom.cpp]
-detect_extensions = ['cpp']
-format = "[$symbol]($style)"
-symbol = " 󰙲"
-style = "bold white"
+[palettes.gulf]
+middle1 = '#93dafe'
+middle2 = '#ff7403'
+error = '#853b00'
+text = '#061240'
 
-[custom.makefile]
-detect_files = ['Makefile', 'makefile']
-format = "[$symbol]($style)"
-symbol = " "
-style = "bold white"
+[palettes.last_purple]
+middle1 = '#7A00B3'
+middle2 = '#9D00E5'
+error = '#ff00f7'
+text = '#FFFFFF'
+
+[palettes.veryred]
+middle1 = '#AA0000'
+middle2 = '#D5D5D5'
+error = '#FFDFD3'
+text = '#032323'
+
+[palettes.retrorainbow]
+middle1 = '#6688c3'
+middle2 = '#48a56a'
+error = '#FFDFD3'
+text = '#ffffff'
+
+[palettes.engine]
+middle1 = '#F1602C'
+middle2 = '#EC8922'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.retro]
+middle1 = '#028391'
+middle2 = '#F85525'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.vaporwave]
+middle1 = '#9600ff'
+middle2 = '#4900ff'
+error = '#FFDFD3'
+text = '#f5f5f5'
+
+[palettes.rad]
+middle1 = '#FFC300'
+middle2 = '#FF5733'
+error = '#FFDFD3'
+text = '#000000'
+
+[palettes.purple]
+middle1 = '#957DAD'
+middle2 = '#D291BC'
+error = '#FFDFD3'
+text = '#000000'
 
 [time]
 disabled = false
 format="[$time]($style)"
 time_format = '%T'
-style = "bold white"
-
-[c]
-format = "[$symbol]($style)"
-symbol = " "
-detect_extensions = ['c', 'h']
-style = "bold white"
-
-[character]
-success_symbol = '[ ↣](bold green)'
-error_symbol = '[ ↣](bold red)'
-
-[username]
-style_user = 'bold white'
-disabled = false
-show_always = true
-format = '[$user]($style)'
-
-[os]
-disabled = false
-style = "bold white"
-
-[os.symbols]
-Windows = "󰍲"
-Ubuntu = ""
-SUSE = ""
-Raspbian = ""
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
-
-[git_branch]
-format = "[git:](bold green) [$symbol$branch | ](bold white)"
-style="bold white"
+style = "fg:text bg:middle1"
 
 [git_status]
-format = '[$all_status$ahead_behind$up_to_date]($style)'
-conflicted = '[ ](red)'
-ahead = '[  ](yellow)'
-behind = '[  ](yellow)'
-diverged = '[ ](yellow)'
-up_to_date = "[ ](green)"
-untracked = '[󰤔 ](red)'
-stashed = '[ ](yellow)'
-modified = '[ ](yellow)'
-staged = '[++\($count\) ](green)'
-renamed = '[ ](yellow)'
-deleted = '[ ](red)'
+format = '[$all_status $ahead_behind]($style)'
+up_to_date = '✓'
+conflicted = '🏳'
+ahead = '⇑'
+behind = '⇓'
+diverged = '↰'
+untracked = ' 󰤔'
+stashed = ' 🮽'
+modified = ' ⚙'
+staged = '[++\($count\)](fg:text bg:middle2)'
+renamed = '✎'
+deleted = '🗑 '
+style = "fg:text bg:middle2"
+
+[git_branch]
+disabled = false
+format = '[ $branch ]($style)'
+style = 'fg:text bg:middle2'
+
+[character]
+success_symbol = '[](middle2)'
+error_symbol = '[](error)'
+
+[directory]
+format = '[  $path]($style)'
+style = 'fg:text bg:middle1'
+
