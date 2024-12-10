@@ -13,9 +13,9 @@ vim.keymap.set('n', '<leader>s', ":Telescope live_grep<CR>")
 -- Terminal
 vim.keymap.set('n', '<leader>t', ":terminal<CR>")
 
--- Barbar
-vim.keymap.set('n', '<leader><left>', ":BufferPrevious<CR>")
-vim.keymap.set('n', '<leader><right>', ":BufferNext<CR>")
-vim.keymap.set('n', '<leader>x', ":BufferClose<CR>")
+-- tabs
+vim.keymap.set('n', '<leader><left>', ":BufferLineMovePrev<CR>")
+vim.keymap.set('n', '<leader><right>', ":BufferLineMoveNext<CR>")
+vim.keymap.set('n', '<leader>x', ":BufferLinePickClose<CR>")
 
 vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
