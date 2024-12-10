@@ -58,8 +58,8 @@ chmod +777 nvim.appimage
 while true; do
 read -p "Do you want to install Tidal Hifi? (yes/no) λ " yn
 case $yn in 
-	yes )	wget https://github.com/Mastermindzh/tidal-hifi/releases/download/5.9.0/tidal-hifi-5.9.0.AppImage -O Tidal
-		chmod +777 Obsidian;
+	yes )	wget https://github.com/Mastermindzh/tidal-hifi/releases/download/5.9.0/tidal-hifi-5.9.0.AppImage
+		chmod +777 tidal-hifi-5.9.0.AppImage;
 		break;;
 	no ) echo the installation will proceed without Tidal;
 		break ;;
@@ -70,8 +70,8 @@ done
 while true; do
 read -p "Do you want to install Obsidian? (yes/no) λ " yn
 case $yn in 
-	yes )	wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.7/Obsidian-1.7.7.AppImage -O Obsidian
-		chmod +777 Obsidian;
+	yes )	wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.7/Obsidian-1.7.7.AppImage
+		chmod +777 Obsidian-1.7.7.AppImage;
 		break;;
 	no ) echo the installation will proceed without Obsidian;
 		break ;;
