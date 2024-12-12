@@ -1,3 +1,5 @@
+-- define space as leader
+
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
@@ -13,9 +15,10 @@ vim.keymap.set('n', '<leader>s', ":Telescope live_grep<CR>")
 -- Terminal
 vim.keymap.set('n', '<leader>t', ":terminal<CR>")
 
--- tabs
-vim.keymap.set('n', '<leader><left>', ":BufferLineMovePrev<CR>")
-vim.keymap.set('n', '<leader><right>', ":BufferLineMoveNext<CR>")
+-- Tabs
+vim.keymap.set('n', '<leader><left>', ":BufferLineCyclePrev<CR>")
+vim.keymap.set('n', '<leader><right>', ":BufferLineCycleNext<CR>")
 vim.keymap.set('n', '<leader>x', ":BufferLinePickClose<CR>")
 
+-- FineCmdline
 vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
