@@ -42,11 +42,11 @@ fi
 
 if [ -d $HOME/.config/kitty ]; then
 	mv kitty.conf $HOME/.config/kitty
-	mv kitty_5_wallpaper.png $HOME/.config/kitty
+	mv kitty_wallpaper.png $HOME/.config/kitty
 else
 	mkdir $HOME/.config/kitty
 	mv kitty.conf $HOME/.config/kitty
-	mv kitty_5_wallpaper.png $HOME/.config/kitty
+	mv kitty_wallpaper.png $HOME/.config/kitty
 fi
 
 #Installs every adition app like NVim, Tidal and Obsidian

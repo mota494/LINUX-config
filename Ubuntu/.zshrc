@@ -1,3 +1,4 @@
+#Release V1.1
 #zsh_config
 
 setopt correct
