@@ -1,0 +1,31 @@
+--nvim
+
+Leader - <Space>
+
+Leader - n+f : Open/Focus neotree
+Leader - nm : Close neotree
+
+Leader - f : Find files through telescope
+Leader - s : Live grep through telescope (may require aditional setup)
+
+Leader - t : open terminal
+
+Leader - arrow left/arrow right : cycle through open buffers
+Leader - x <buffer id> : close buffer
+
+--kitty
+
+Leader - <Ctrl + Shift>
+
+Leader - u : opens emoji and unicode section
+
+--tmux
+
+Leader - <Ctrl + b>
+
+Leader + Arrows : move between panes
+Leader + " : split window vertically
+Leader + ' : split window horizontally
+Leader + c : creates new workspace
+Leader + <index> : cycle between workspaces
+Leader + w : look through workspaces

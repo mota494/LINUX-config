@@ -27,6 +27,13 @@ else
 	mv .zshrc $HOME
 fi
 
+if [ -f $HOME/.tmux.conf ]; then
+	cp $HOME/.tmux.conf $HOME/.oldtmuxconf
+	mv .tmux.conf $HOME
+else
+	mv .tmux.conf $HOME
+fi
+
 if [ -d $HOME/.vim ]; then
 	if [ -d $HOME/.vim/plugin ]; then
 		mv stdheader.vim $HOME/.vim/plugin
@@ -49,23 +56,11 @@ else
 	mv kitty_wallpaper.png $HOME/.config/kitty
 fi
 
-#Installs every adition app like NVim, Tidal and Obsidian
+#Installs every adition app like NVim, and Obsidian
 
 cd $HOME/bin
 wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
 chmod +777 nvim.appimage
-
-while true; do
-read -p "Do you want to install Tidal Hifi? (yes/no) λ " yn
-case $yn in 
-	yes )	wget https://github.com/Mastermindzh/tidal-hifi/releases/download/5.9.0/tidal-hifi-5.9.0.AppImage
-		chmod +777 tidal-hifi-5.9.0.AppImage;
-		break;;
-	no ) echo the installation will proceed without Tidal;
-		break ;;
-	* ) echo invalid response;;
-esac
-done
 
 while true; do
 read -p "Do you want to install Obsidian? (yes/no) λ " yn
@@ -73,7 +68,7 @@ case $yn in
 	yes )	wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.7/Obsidian-1.7.7.AppImage
 		chmod +777 Obsidian-1.7.7.AppImage;
 		break;;
-	no ) echo the installation will proceed without Obsidian;
+	no ) echo The installation will proceed without Obsidian;
 		break ;;
 	* ) echo invalid response;;
 esac
