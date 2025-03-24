@@ -59,8 +59,11 @@ To change the theme, just copy and paste the desired .toml file to your .config 
 # Font suggestion
 
 Fira Code
+
 JetBrains Mono
+
 IBM plex
+
 Loveska
 
 <div align="center">
