@@ -24,8 +24,8 @@ add_newline = false
 #palette = 'veryred'
 #palette = 'last_purple'
 #palette = 'gulf'
-#palette = 'phantom_thieves'
-palette = 'rose-pine'
+palette = 'phantom_thieves'
+#palette = 'rose-pine'
 
 [palettes.rose-pine]
 middle1 = '#3c89a9'
