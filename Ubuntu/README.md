@@ -53,7 +53,7 @@ Starship is a fast, minimal and customizable terminal prompt that can be used in
 ### NVim
 
 ```
-$HOME/.config
+$HOME/.config/nvim
 ```
 
 ### Tmux
