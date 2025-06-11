@@ -50,20 +50,34 @@ Starship is a fast, minimal and customizable terminal prompt that can be used in
 > [!WARNING]
 > This config will always use the default Linux file system, not following the default location for everything is bad practice and makes it harder for new users to learn how to use the tools 
 
-### NVim
+## NVim
 
+To add more plugins to NVim you just need to create a file .lua in this directory and it will be automatically be added the next time you use nvim
 ```
-$HOME/.config/nvim
+$HOME/.config/nvim/lua/plugins 
 ```
 
-### Tmux
+## Tmux
 
-Tmux is a terminal multiplexer that let's the user switch between several terminal programs in just one terminal with some possible customization.
+The TMUX config file is located on your home folder.
+```
+$HOME/.tmux.conf
+```
+If you want to learn more on customizing your TMUX and scripting TMUX I recommend using [this](https://wiki.archlinux.org/title/Tmux) guide.
 
-### Kitty
 
-Kitty is a fast and feature rich terminal emulator, with a very user friendly config file that is compatible with multiple operating systems.
+## Kitty
 
-### Startship
+Kitty config can be found on the .config folder
+```
+$HOME/.config/kitty/
+```
+On this folder you'll find kitty.conf, the config file for kitty and a wallpaper that you can change at your will
 
-Starship is a fast, minimal and customizable terminal prompt that can be used in most terminal emulators, startship needs a nerd font that can be installed through [here](https://www.nerdfonts.com/) 
+## Startship
+
+Starship is configured through a .toml file that can be found in the .config folder
+```
+$HOME/.config
+```
+Within this repository there's a folder called `startship_configs` that have a few extra themes but if you want to create your own which I highly encourage you can check the [official starship documentation](https://starship.rs/config/)
