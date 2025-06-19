@@ -59,8 +59,8 @@ fi
 #Installs every adition app like NVim, and Obsidian
 
 cd $HOME/bin
-wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
-chmod +777 nvim.appimage
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage
+chmod +777 nvim-linux-x86_64.appimage
 
 while true; do
 read -p "Do you want to install Obsidian? (yes/no) λ " yn
