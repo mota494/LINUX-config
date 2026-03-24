@@ -1,5 +1,6 @@
 require("config.lazy")
 require("config.keybinds")
+require("config.jsxlsp")
 
 local tab_width = 4
 vim.opt.tabstop = tab_width
@@ -16,4 +17,4 @@ vim.opt.showtabline = 2
 vim.cmd('let g:mail42 = "mloureir@42porto.com"')
 vim.cmd('let g:user42 = "mloureir"')
 vim.cmd.set "number"
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "bluloco"

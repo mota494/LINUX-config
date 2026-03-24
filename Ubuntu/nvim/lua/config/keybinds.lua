@@ -26,8 +26,8 @@ vim.keymap.set('n', '<leader>x', ":BufferLinePickClose<CR>")
 
 vim.keymap.set('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 
-vim.keymap.set('n', '<leader>tf', ':Telescope find_files<CR>')
-vim.keymap.set('n', '<leader>tr', ':Telescope live_grep<CR>')
+vim.keymap.set('n', '<leader>hf', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<leader>hr', ':Telescope live_grep<CR>')
 
 vim.keymap.set('n', '<leader>nc', ':NvimTreeClose<CR>')
 vim.keymap.set('n', '<leader>nf', ':NvimTreeFocus<CR>')
