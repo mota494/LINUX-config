@@ -21,7 +21,7 @@ return {
 				"typescript-language-server",
 				"--stdio"
 			},
-			filetypes = { "typescript", "javascript" },
+			filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact"},
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
